@@ -1,0 +1,21 @@
+{
+  "name": "airline_nodejs",
+  "version": "1.0.0",
+  "description": "airline management system",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon src/index.js"
+  },
+  "author": "anubha",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0",
+    "mysql2": "^3.14.0",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.2",
+    "winston": "^3.17.0"
+  }
+}
