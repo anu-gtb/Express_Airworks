@@ -19,21 +19,21 @@ module.exports = {
          updatedAt:new Date()
       },
       {
-         airplaneId:1,
+         airplaneId:2,
          row:1,
          col:'C',
          createdAt:new Date(),
          updatedAt:new Date()
       },
       {
-         airplaneId:1,
+         airplaneId:3,
          row:2,
          col:'D',
          createdAt:new Date(),
          updatedAt:new Date()
       },
       {
-         airplaneId:1,
+         airplaneId:4,
          row:2,
          col:'E',
          createdAt:new Date(),

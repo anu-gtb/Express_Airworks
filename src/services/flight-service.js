@@ -20,31 +20,29 @@ async function createFlight(data){
   }
 }
 
-async function getAllFlights(query){
+async function getAllFlights(body){
   let customFilter={};
-  const endingTime='23:59:00';
-  if(query.trips){
-    [departureId,arrivalId]=query.trips.split('-');
-    customFilter.departureId=departureId;
-    customFilter.arrivalId=arrivalId;
-  }
-  if(query.price){
-    [minPrice,maxPrice]=query.price.split('-');
-    customFilter.price={
-      [Op.between]:[minPrice,((maxPrice===undefined)?20000:maxPrice)]
-    }
-  }
-  if(query.travellers){
-    customFilter.totalSeats={
-      [Op.gte]:query.travellers
-    }
-  }
-  if(query.tripDate){
-    customFilter.departureTime={
-      [Op.between]:[query.tripDate,query.tripDate+endingTime]
-    }
-  }
-  try {
+  //const endingTime='23:59:00';
+  [departureId,arrivalId]=body.trips.split('-');
+  customFilter.departureId=departureId;
+  customFilter.arrivalId=arrivalId;
+  // if(body.price){
+  //   [minPrice,maxPrice]=body.price.split('-');
+  //   customFilter.price={
+  //     [Op.between]:[minPrice,((maxPrice===undefined)?20000:maxPrice)]
+  //   }
+  // }
+  // if(body.travellers){
+  //   customFilter.totalSeats={
+  //     [Op.gte]:body.travellers
+  //   }
+  // }
+  // if(body.tripDate){
+  //   customFilter.departureTime={
+  //     [Op.between]:[body.tripDate,body.tripDate+endingTime]
+  //   }
+  // }
+  try{
     const flights=await flightRepo.getAllFlights(customFilter);
     return flights;
   } catch (error) {
