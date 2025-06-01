@@ -9,7 +9,7 @@ async function answer(prompt){
   try{
     const response=await ai.models.generateContent({
       model:'gemini-2.0-flash',
-      contents:`Explain all the necessary instructions and rules to the customer about ${prompt} and give all the necessary information.`
+      contents:`Explain all the necessary airline instructions and rules to the customer about ${prompt} and give all the necessary information.`
     });
     return response.text;
   }catch(error){
