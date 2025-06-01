@@ -2,7 +2,3 @@ node_modules/
 .env
 combined.log
 src/config/config.json
-Flight_Booking/node_modules/
-Flight_Booking/.env
-Flight_Booking/combined.log
-Flight_Booking/sr/config/config.json
