@@ -26,7 +26,7 @@ Take a look inside the `src` folder
   ```
 - In root directory, create a `.env` file and add following env variables
   ```
-    PORT = <Port number of your choice>
+    GEMINI_API_KEY = <Your Gemini API key>
 
   ```
 - Inside the `src/config` folder, create a file named as `config.json` and write the following code:
